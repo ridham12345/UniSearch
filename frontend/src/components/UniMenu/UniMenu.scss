@@ -1,0 +1,26 @@
+.uniMenuParent{
+    border-radius: 5px 0px 0px 5px;
+    background-color: $secondary-color;
+    opacity: 0.4;
+    width: 30%;
+    padding: 30px 3%;
+    
+    ul{
+        padding: 0;
+        width: 100%;
+        //university menu styling
+        li{
+            color: #fff;
+            padding: 10px 0;
+            cursor: pointer;
+            border-bottom: 1px solid #fff;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        //set active for current menu
+        .active{
+            font-weight: bold !important;
+            border-bottom: 3px solid #fff;
+        }
+    }
+}

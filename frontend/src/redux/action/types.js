@@ -1,0 +1,8 @@
+export const ADDNEWCOMMENT = 'ADDNEWCOMMENT';
+export const LISTUNI = 'LISTUNI';
+export const LISTCOURSE = 'LISTCOURSE';
+export const LISTMAJORS = 'LISTMAJORS';
+export const DELETECOMMENT = 'DELETECOMMENT';
+export const UPDATECOMMENT = 'UPDATECOMMENT';
+export const UNIBYID = 'UNIBYID';
+export const LISTCOMMENT = 'LISTCOMMENT';

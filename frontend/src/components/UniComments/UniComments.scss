@@ -1,0 +1,89 @@
+.UniContainer{
+    padding: 4% 7%;
+    .bodyContainer{
+        border-radius: 5px;
+        display: flex;
+        margin-top: 5%;
+        //comment bubble
+        .commentContainer{
+            background-color: #FEFDFD;
+            padding: 3% 3%;
+            width: 70%;
+            h2{
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .body{
+                height: 50vh;
+                overflow: auto;
+            }
+            .commentEl{
+                margin-bottom: 2em;
+                width: 80%;
+                .userName{
+                    font-size: 16px;
+                    color: 8C8888;
+                    margin-bottom: 0.5em;
+                }
+                .commentBubble{
+                    background-color: #D9D9D9;
+                    border-radius: 5px;
+                    padding: 20px;
+                    
+                    .currUser{
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    .time{
+                        color: #8C8888;
+                        font-size: 14px;
+                        width: 100%;
+                        text-align: right;
+                        margin-top: 15px;
+                    }
+                    img{
+                        margin-left: 10px;
+                        cursor: pointer;
+                    }
+                }
+                
+            }
+            //comment for other users
+            .commentEl.elLeft{
+                float: left;
+            }
+            //comment if logged in user added the comment
+            .commentEl.elRight{
+                float: right;
+                .userName{
+                    text-align: right;
+                }
+            }
+            .addCommentSection{
+                form{
+                    position: relative;
+                }
+                input{
+                    padding: 10px 30px;
+                    background-color: #D9D9D9;
+                    border-radius: 5px;
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                    margin-top: 20px;
+                }
+                //submit the comment
+                .submitComment{
+                    position: absolute;
+                    right: 1%;
+                    top: 40%;
+                    outline: none;
+                    border: none;
+                    background: #D9D9D9;
+                }
+                
+
+            }
+        }
+    }
+}

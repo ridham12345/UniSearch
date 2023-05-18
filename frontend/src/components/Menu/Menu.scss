@@ -1,0 +1,37 @@
+.menuParent{
+    display: flex;
+    justify-content: space-between;
+    background-color: $primary-color;
+    .logo{
+        margin: 0px 25px;
+        img{
+            height: 72px;
+        }
+    }
+    //menu items
+    .menuItems{
+        width: 37%;
+        ul{
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            margin-top: revert;
+            a{
+                margin: 10px 0;
+                li{
+                    display: inline;
+                    color: $secondary-color;
+                    
+                }
+            }
+            
+        }
+    }
+    //sign out section
+    .signOut{
+        img{
+            height: 25px;
+            margin: 25px;
+        }
+    }
+}

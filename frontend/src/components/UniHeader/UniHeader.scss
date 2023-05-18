@@ -1,0 +1,29 @@
+.headerParent{
+    width: 100%;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 30px;
+    display: flex;
+    .uniImg{
+        img{
+            height: 130px;
+        }   
+        
+    }
+    // university header styles
+    .uniDetails{
+        margin-left: 30px;
+        .uniName{
+            font-size: 32px;
+
+        }
+        .uniLoc{
+            font-size: 24px;
+            color: #534C4C;
+        }
+        .uniDesc{
+            color: #534C4C;
+            font-size: 14px;
+        }
+    }
+}

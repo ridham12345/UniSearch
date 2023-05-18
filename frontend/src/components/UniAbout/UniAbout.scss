@@ -1,0 +1,18 @@
+.UniContainer{
+    padding: 4% 7%;
+    .bodyContainer{
+        border-radius: 5px;
+        display: flex;
+        margin-top: 5%;
+        // style about from API
+        .aboutContainer{
+            background-color: #FEFDFD;
+            padding: 3% 7%;
+            width: 70%;
+            h2{
+                text-align: center;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

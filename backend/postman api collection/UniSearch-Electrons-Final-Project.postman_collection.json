@@ -1,0 +1,731 @@
+{
+	"info": {
+		"_postman_id": "b478de38-6295-42dc-a765-6227adea6ae6",
+		"name": "UniSearch-Electrons-Final-Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "University",
+			"item": [
+				{
+					"name": "List all universities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/university/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"university",
+								"all"
+							],
+							"query": [
+								{
+									"key": "universityName",
+									"value": "northeastern",
+									"disabled": true
+								},
+								{
+									"key": "location",
+									"value": "boston",
+									"disabled": true
+								},
+								{
+									"key": "ranking",
+									"value": "15",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "avgTuitionCost",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove a university",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/university/638193892a571a59f43895b3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"university",
+								"638193892a571a59f43895b3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find university by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/university/638193892a571a59f43895b3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"university",
+								"638193892a571a59f43895b3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new university",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Northeastern University\",\n    \"ranking\": 40,\n    \"acceptanceRate\": \"40%\",\n    \"avgTuitionCost\": 40000,\n    \"logoUrl\": \"https://upload.wikimedia.org/wikipedia/en/b/bd/Northeastern_University_seal.svg\",\n    \"location\": [\n        {\n            \"name\": \"Boston\",\n            \"address\": \"60 Huntington Ave, Boston, MA 02115\"\n        },\n        {\n            \"name\": \"Toronto\",\n            \"address\": \"First Canadian Place, 100 King St W #4620, Toronto, ON M5X 1E2, Canada\"\n        }\n    ],\n    \"faq\": [\n        {\n            \"question\": \"what is the average cost of for this University\",\n            \"answer\": \"30K\"\n        }\n    ],\n    \"about\": \"this is description of university\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/university/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"university",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update university",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Northeastern University\",\n    \"ranking\": 40,\n    \"acceptanceRate\": \"40%\",\n    \"avgTuitionCost\": 40000,\n    \"logoUrl\": \"https://upload.wikimedia.org/wikipedia/en/b/bd/Northeastern_University_seal.svg\",\n    \"location\": [\n        {\n            \"name\": \"Boston\",\n            \"address\": \"60 Huntington Ave, Boston, MA 02115\"\n        },\n        {\n            \"name\": \"Toronto\",\n            \"address\": \"First Canadian Place, 100 King St W #4620, Toronto, ON M5X 1E2, Canada\"\n        }\n    ],\n    \"faq\": [\n        {\n            \"question\": \"what is the average cost of for this University\",\n            \"answer\": \"30K\"\n        }\n    ],\n    \"about\": \"this is description of university\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/university/638193892a571a59f43895b3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"university",
+								"638193892a571a59f43895b3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Major",
+			"item": [
+				{
+					"name": "Add new major",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Computer Science\",\n    \"degree\" : [\n        {\n            \"name\" : \"Undergrad\",\n            \"description\" : \"Informed by experience and inspired by the constantly evolving tech landscape, Khoury College of Computer Sciences engages learners at every level. From undergraduate minors to PhDs—and from core computer science focus areas to interdisciplinary combined majors flexible programs enable you to create your own path.\"\n        },\n        {\n            \"name\" : \"Master\",\n            \"description\" : \"Informed by experience and inspired by the constantly evolving tech landscape, Khoury College of Computer Sciences engages learners at every level. From undergraduate minors to PhDs—and from core computer science focus areas to interdisciplinary combined majors flexible programs enable you to create your own path.\"\n        }\n    ],\n    \"universityId\" : \"637ad46c6eee85183e025e7c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/major/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"major",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all majors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/major/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"major",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List universities by major name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/major/listUniversitiesByMajorName/Comp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"major",
+								"listUniversitiesByMajorName",
+								"Comp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find major by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/major/6381634816b1c035bdb9b123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"major",
+								"6381634816b1c035bdb9b123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update major",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Test university Computer Science 2\",\n    \"degree\": [\n        {\n            \"name\": \"Phd\",\n            \"description\": \"Informed by experience and inspired by the constantly evolving tech landscape, Khoury College of Computer Sciences engages learners at every level. From undergraduate minors to PhDs—and from core computer science focus areas to interdisciplinary combined majors flexible programs enable you to create your own path.\"\n        },\n        {\n            \"name\": \"Master\",\n            \"description\": \"Informed by experience and inspired by the constantly evolving tech landscape, Khoury College of Computer Sciences engages learners at every level. From undergraduate minors to PhDs—and from core computer science focus areas to interdisciplinary combined majors flexible programs enable you to create your own path.\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/major/638193be2a571a59f43895c3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"major",
+								"638193be2a571a59f43895c3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove a major",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/major/6381b24c1f217450a684d7d8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"major",
+								"6381b24c1f217450a684d7d8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find major by university Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/major?universityId=638193892a571a59f43895b3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"major"
+							],
+							"query": [
+								{
+									"key": "universityId",
+									"value": "638193892a571a59f43895b3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Course",
+			"item": [
+				{
+					"name": "List all courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/course/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"course",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Application Development\",\n    \"code\" : \"INFO 6001\",\n    \"description\" : \"This course teaches about fundamentals of mobile Development. Students will learn technologies like React Native, flutter and native iOS and Android Development\",\n    \"majorId\" : \"637b09818ebd1bb01d08021a\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/course/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"course",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get course by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/course/637b1b45d3daf6aa32c68b95",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"course",
+								"637b1b45d3daf6aa32c68b95"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find courses by majorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/course?majorId=637b09818ebd1bb01d08021a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"course"
+							],
+							"query": [
+								{
+									"key": "majorId",
+									"value": "637b09818ebd1bb01d08021a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update course",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Website Design\",\n    \"code\": \"INFO 6150\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/course/637b1b45d3daf6aa32c68b95",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"course",
+								"637b1b45d3daf6aa32c68b95"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove a course",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/course/6381638e16b1c035bdb9b12b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"course",
+								"6381638e16b1c035bdb9b12b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Faculty",
+			"item": [
+				{
+					"name": "Add new faculty",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Medi Servattalab\",\n    \"courseId\" : [\"637b1bd2d3daf6aa32c68b98\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/faculty/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"faculty",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all faculties",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/faculty/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"faculty",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get faculty by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/faculty/637b2922199666b6bce28285",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"faculty",
+								"637b2922199666b6bce28285"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update faculty",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Amuthan Arulraj\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/faculty/637b2922199666b6bce28285",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"faculty",
+								"637b2922199666b6bce28285"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove a faculty",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/faculty/637b2960199666b6bce28287",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"faculty",
+								"637b2960199666b6bce28287"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "List all comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/comment/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comment",
+								"all"
+							],
+							"query": [
+								{
+									"key": "universityId",
+									"value": "638250a2b38cc9c5e7be9f68",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find comment by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/comment/638aa9d5db821f10bdcf42cc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comment",
+								"638aa9d5db821f10bdcf42cc"
+							],
+							"query": [
+								{
+									"key": "universityId",
+									"value": "637b0832d251ebea3657faa6",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\":\"ridham\",\n    \"comment\": \"this is now the best university\",\n    \"universityId\": \"638250a2b38cc9c5e7be9f68\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/comment/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comment",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update comment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\":\"ridham\",\n    \"comment\": \"this is nice university\",\n    \"universityId\": \"638250a2b38cc9c5e7be9f68\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/comment/638aacf32701a6dac718f903",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comment",
+								"638aacf32701a6dac718f903"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/comment/638aacf32701a6dac718f903",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comment",
+								"638aacf32701a6dac718f903"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

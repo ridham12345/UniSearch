@@ -1,0 +1,27 @@
+.aboutPrContainer{
+    text-align: center;
+    padding: 30px;
+    .aboutPrParent{
+        .h3,h4{
+            margin-top: 20px;
+            
+        }
+        .aboutPrCardParent{
+            
+            .prCard{
+                margin-top: 30px;
+                .prItem{
+                    border: 1px solid $secondary-color;
+                    padding: 30px;
+                    border-radius: 5px;
+                    padding: 20px;
+                    height: 453px;
+                    img{
+                        width: 257px;
+                    }
+                }
+            }
+            
+        }
+    }
+}
